@@ -10,9 +10,23 @@ h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}h2{font-size:19px;margin:
 .meta{color:var(--sub);font-size:15px;margin:0}.chip{display:inline-block;background:var(--chip);color:var(--blue);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:600;margin:10px 6px 0 0}
 ul{margin:0;padding-left:20px}li{margin:6px 0}table{width:100%;border-collapse:collapse;font-size:15px}td,th{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--sub);font-weight:600;width:34%}
 .foot{color:var(--sub);font-size:14px;text-align:center}a{color:var(--blue);text-decoration:none}strong{font-weight:700}
+/* 360px 폭에서 긴 URL·상수명(ACCESS_ADSERVICES_*)이 한 단어로 붙어 칸을 밀어낸다 → 필요할 때만 단어 안에서 줄바꿈 */
+li,td,th,p,a{overflow-wrap:break-word;word-break:break-word}
+.langbar{display:flex;gap:8px;justify-content:flex-end;margin:0 0 12px}
+.langbtn{-webkit-appearance:none;appearance:none;border:1px solid var(--line);background:var(--card);color:var(--sub);font:inherit;font-size:15px;font-weight:600;padding:7px 16px;border-radius:999px;cursor:pointer}
+.langbtn.on{background:var(--chip);border-color:var(--chip);color:var(--blue)}
+.langbtn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+[hidden]{display:none!important}
 @media (prefers-color-scheme:dark){:root{--bg:#0b0e14;--card:#171c27;--ink:#eef2f8;--sub:#9aa5b8;--chip:#1d2a44;--line:#2a3140}}
 </style></head><body><div class="wrap">
-<div class="card"><h1>떡상 거래소 개인정보처리방침</h1><p class="meta">시행일 2026-09-08 · 앱 패키지 com.jotcoin.exchange · 적용 버전 1.4.0</p>
+
+<div class="langbar" role="group" aria-label="Language / 언어">
+<button type="button" class="langbtn" data-lang="ko" aria-pressed="false" lang="ko">한국어</button>
+<button type="button" class="langbtn" data-lang="en" aria-pressed="false" lang="en">English</button>
+</div>
+
+<div id="sec-ko" lang="ko">
+<div class="card"><h1>떡상 거래소 개인정보처리방침</h1><p class="meta">시행일 2026-09-09 · 앱 패키지 com.jotcoin.exchange · 적용 버전 1.4.5</p>
 <span class="chip">회원가입 없음</span><span class="chip">인앱결제 없음</span><span class="chip">광고 포함 (Google AdMob)</span><span class="chip">게임 기록 기기 저장</span></div>
 
 <div class="card"><h2>1. 운영자가 직접 수집하는 정보</h2><ul>
@@ -60,7 +74,91 @@ ul{margin:0;padding-left:20px}li{margin:6px 0}table{width:100%;border-collapse:c
 
 <div class="card"><h2>8. 운영자 및 문의</h2><table>
 <tr><th>운영자</th><td>떡상 거래소 운영팀</td></tr><tr><th>문의</th><td><a href="mailto:ysw485976@gmail.com">ysw485976@gmail.com</a></td></tr>
-<tr><th>변경 안내</th><td>방침이 바뀌면 이 페이지를 갱신하여 공지합니다.</td></tr></table></div>
+<tr><th>언어</th><td>본 방침은 한국어와 영어로 제공되며 두 본문의 내용은 같습니다. 해석에 차이가 있으면 한국어 본문을 기준으로 합니다.</td></tr>
+<tr><th>변경 안내</th><td>방침이 바뀌면 이 페이지를 갱신하여 공지합니다. 2026-09-09 개정 — 영어 본문 병기, 적용 버전 표기 갱신(수집·이용 내용 변경 없음).</td></tr></table></div>
 
 <p class="foot">떡상 거래소 — 가상 자금 레버리지 모의투자 게임. 실제 돈·실제 거래·상금 없음.</p>
-</div></body></html>
+</div>
+
+<div id="sec-en" lang="en" hidden>
+<div class="card"><h1>MOON EXCHANGE Privacy Policy</h1><p class="meta">Effective 2026-09-09 · App package com.jotcoin.exchange · Applies to version 1.4.5</p>
+<span class="chip">No account needed</span><span class="chip">No in-app purchases</span><span class="chip">Contains ads (Google AdMob)</span><span class="chip">Game data kept on device</span></div>
+
+<div class="card"><h2>1. Information the developer collects directly</h2><ul>
+<li>The developer does <strong>not collect your name, phone number, email address, postal address, location, contacts or photos.</strong> There is no sign-up and no login.</li>
+<li>Gameplay data (virtual balance, open positions, trade and liquidation history, statistics, nickname, settings) is <strong>stored only on your device</strong>, in the app storage.</li>
+<li>You can delete that data at any time with <strong>Settings &gt; Reset everything</strong> inside the app, and it is removed together with the app when you uninstall it.</li>
+<li>The developer runs no separate server or database that could identify a user.</li></ul></div>
+
+<div class="card"><h2>2. Advertising (Google AdMob)</h2><ul>
+<li>The app contains Google AdMob ads, shown in two places.
+  <ul><li><strong>Rewarded video</strong> — shown only after a wipeout, and only when you tap “Watch an ad for virtual funds” yourself</li>
+  <li><strong>Interstitial</strong> — shown at the start of a new season (mode switch or restart), at most once every 3 minutes</li></ul></li>
+<li>Google and its partners, as the ad provider, may collect and use your <strong>advertising ID (AAID), device and app information, approximate location inferred from your IP address, and ad interaction history</strong> to serve and measure ads and to prevent fraud. This information is collected by Google; the developer receives only aggregated impression and revenue statistics, never data that identifies an individual user.</li>
+<li>How Google handles this data: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
+<li><strong>If you do not want personalised ads</strong>, you can reset or delete your advertising ID in Android <em>Settings &gt; Privacy &gt; Ads</em>. Non-personalised ads may still be shown.</li>
+<li>The app offers no in-app purchases, and every feature is available whether or not you watch an ad.</li></ul></div>
+
+<div class="card"><h2>3. Online ranking (turned off in the current release)</h2><ul>
+<li><strong>In the version currently published on the store the ranking server configuration is empty, so ranking records stay on the device and are not transmitted anywhere.</strong></li>
+<li>If online ranking is enabled in a future update, the data sent would be: your nickname (entered by you), an anonymous identifier (a random value issued by Firebase Anonymous Authentication, not linked to a name or email address), and score figures (peak balance, net profit, number of trades, liquidations and retries, and the like).</li>
+<li>Where it would be stored: Google Firebase Authentication and Cloud Firestore (region asia-northeast3, Seoul). It would be used only to display the leaderboard, and never sold or provided for advertising purposes.</li>
+<li>Retention: until you request deletion, or until the service ends. Running <strong>Reset everything</strong> in the app also overwrites the server record with zeros (applied on your next connection if you are offline).</li>
+<li>If and when this section actually takes effect, the effective date and the text of this policy will be updated and announced.</li></ul></div>
+
+<div class="card"><h2>4. Permissions declared by the app</h2><table>
+<tr><th>INTERNET<br>ACCESS_NETWORK_STATE</th><td>Requesting ads and checking connectivity. (Also used for ranking traffic if online ranking is enabled.)</td></tr>
+<tr><th>AD_ID<br>ACCESS_ADSERVICES_*</th><td>Access to the Google Play advertising ID and the ad services — for serving and measuring AdMob ads. Standard permissions required by Google advertising libraries.</td></tr>
+<tr><th>VIBRATE</th><td>Short haptic feedback when an order fills or a position is liquidated. Can be turned off in the app settings.</td></tr>
+<tr><th>WAKE_LOCK<br>FOREGROUND_SERVICE</th><td>Declared internally by Google Play services and the advertising libraries. The app itself runs no background work.</td></tr>
+</table><p class="meta" style="margin-top:12px">The app requests no camera, location, contacts, microphone or external storage permission. Sharing a report card image writes a temporary file to the private cache folder of the app and hands it to the Android share sheet; you choose who receives it.</p></div>
+
+<div class="card"><h2>5. Third parties and processors</h2><table>
+<tr><th>Google AdMob</th><td>Serving and measuring ads (see section 2)</td></tr>
+<tr><th>Google Firebase</th><td>Storing online rankings — not used in the current release (see section 3)</td></tr>
+</table><p class="meta" style="margin-top:12px">Apart from the above, user information is never sold, rented or provided to third parties. Disclosure happens only where required by law, through the applicable legal process.</p></div>
+
+<div class="card"><h2>6. Your rights</h2><ul>
+<li>On-device data: delete it immediately with <strong>Reset everything</strong> in the app, or by uninstalling the app.</li>
+<li>Advertising identifier: reset or delete it in the Android settings (see section 2).</li>
+<li>Online ranking records (if enabled): send your nickname to the contact address below and it will be deleted within 7 days.</li></ul></div>
+
+<div class="card"><h2>7. Children</h2><ul>
+<li>This app is not directed at children under 14, and does not knowingly collect personal information from children.</li>
+<li>It is a simulation game about leveraged trading; its content rating and the presence of ads are declared on the store listing.</li></ul></div>
+
+<div class="card"><h2>8. Developer and contact</h2><table>
+<tr><th>Operator</th><td>MOON EXCHANGE team (<span lang="ko">떡상 거래소 운영팀</span>)</td></tr><tr><th>Contact</th><td><a href="mailto:ysw485976@gmail.com">ysw485976@gmail.com</a></td></tr>
+<tr><th>Languages</th><td>This policy is provided in Korean and English with identical content. In case of any discrepancy, the Korean text prevails.</td></tr>
+<tr><th>Changes</th><td>If this policy changes, this page is updated and the change announced here. Revised 2026-09-09 — English text added, applicable version updated (no change to what is collected or how it is used).</td></tr></table></div>
+
+<p class="foot">MOON EXCHANGE — a virtual-money leveraged trading simulation game. No real money, no real trading, no prizes.</p>
+</div>
+
+</div><script>
+(function(){
+  var q=new URLSearchParams(location.search).get('lang');
+  var saved=null; try{ saved=localStorage.getItem('moonex.privacy.lang'); }catch(e){}
+  var nav=(navigator.language||'').toLowerCase();
+  var lang=q||saved||(nav.indexOf('ko')===0?'ko':'en');
+  if(lang!=='ko'&&lang!=='en') lang='en';
+  function apply(l){
+    document.getElementById('sec-ko').hidden=(l!=='ko');
+    document.getElementById('sec-en').hidden=(l!=='en');
+    document.documentElement.lang=l;
+    document.title=(l==='ko')?'떡상 거래소 개인정보처리방침':'MOON EXCHANGE Privacy Policy';
+    var b=document.querySelectorAll('.langbtn');
+    for(var i=0;i<b.length;i++){
+      var on=(b[i].getAttribute('data-lang')===l);
+      b[i].setAttribute('aria-pressed',on?'true':'false');
+      b[i].className='langbtn'+(on?' on':'');
+    }
+    try{ localStorage.setItem('moonex.privacy.lang',l); }catch(e){}
+  }
+  var bs=document.querySelectorAll('.langbtn');
+  for(var i=0;i<bs.length;i++){
+    bs[i].addEventListener('click',function(e){ apply(e.currentTarget.getAttribute('data-lang')); });
+  }
+  apply(lang);
+})();
+</script></body></html>
